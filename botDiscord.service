@@ -1,0 +1,14 @@
+[Unit]
+Description=Cronus
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=www-data
+WorkingDirectory=/var/git/proxy-pass-octoprint/
+ExecStart=/usr/bin/python3 /var/git/proxy-pass-octoprint/botDiscord.py
+
+[Install]
+WantedBy=multi-user.target
