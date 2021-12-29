@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif
+}
+body{
+    justify-content: center;
+    display: flex;
+    overflow: overlay;
+    align-items: center;
+    min-height: 100vh;
+    background: #ebf5fc
+}
+.notice{
+    padding: 15px
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    padding: 20px 0
+}
+.container .card{
+    position: relative;
+    width: 320px;
+    height: 440px;
+    background: #ebf5fc;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.05),
+                inset -5px 5px 5px rgba(255,255,255,0.5),
+                5px 5px 5px rgba(0,0,0,0.05),
+                -5px -5px 5px rgba(255,255,255,0.5);
+    border-radius: 15px;
+    margin: 30px;
+    transition: 0.5s
+}
+.container .card .box{
+    position: absolute;
+    top: 20px;
+    Left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background:#ebf5fc;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s
+}
+.container .card:hover .box{
+    transform: translateY(-50px);
+    box-shadow: 0 10px 48px rgba(0,0,0,0.2);
+    background: #fff
+}
+.container .card .box .content{
+    padding: 20px;
+    text-align: center
+}
+.container .card .box .content span.background_img{
+    position: absolute;
+    top: 10px;
+    right: 10px
+}
+.container .card .box .content span.background_img .icon{
+    background-color: rgba(0,0,0,0.07);
+    transition: 0.5s
+}
+.container .card:hover .box .content span.background_img .icon{
+    background-color: rgba(0,0,0,0.11)
+}
+.container .card .box .content span.background_img .icon#h_icon{
+    display: block;
+    width: 123px;
+    height: 170px;
+    -webkit-mask-image: url(../image/h_icon.svg);
+    -webkit-mask-size: 123px 170px
+}
+.container .card .box .content span.background_img .icon#k_icon{
+    display: block;
+    width: 135px;
+    height: 150px;
+    -webkit-mask-image: url(../image/k_icon.svg);
+    -webkit-mask-size: 135px 150px
+}
+.container .card .box .content span.background_img .icon#p_icon{
+    display: block;
+    width: 135px;
+    height: 170px;
+    -webkit-mask-image: url(../image/p_icon.svg);
+    -webkit-mask-size: 135px 170px
+}
+.container .card .box .content h1{
+    font-size: 1.8em;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s
+}
+.container .card .box .content p{
+    font-size: 1em;
+    font-weight: 300;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s
+}
+.container .card:hover .box .content p, 
+.container .card:hover .box .content h1{
+    columns: #fff
+}
+.container .card .box .content ul.detail{
+    list-style-type: none
+}
+::-webkit-scrollbar{
+    width: 11px
+}
+::-webkit-scrollbar-track{
+    background: #ebf5fc
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 16px;
+    background: #babac0;
+    border: 2px solid #ebf5fc
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #808080
+}
+@media screen and (max-width: 357px){
+    ::-webkit-scrollbar{
+        display: none
+    }
+}
+html{
+	scrollbar-color: #babac0 #ebf5fc;
+	scrollbar-width: thin
+}
+html::-webkit-scrollbar-track{
+    background: #ebf5fc
+}
+html::-webkit-scrollbar-thumb{
+    border-radius: 16px;
+    background: #babac0;
+    border: 2px solid #ebf5fc
+}
+html::-webkit-scrollbar-thumb:hover{
+    background: #808080
+}
+@media screen and (max-width: 357px){
+    html{
+	scrollbar-width: none
+    }
+}
